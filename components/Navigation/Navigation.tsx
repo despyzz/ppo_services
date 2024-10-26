@@ -1,31 +1,18 @@
-import Link from "next/link";
+import React from 'react';
+import { AppRoutes } from '@/constants';
+import { Item } from './Item';
+import { Wrapper } from './Wrapper';
 
-export const Navigation = () => {
+export function Navigation() {
   return (
-    <nav>
-      <ul>
-        <li>
-          <Link href="/contacts">Contacts</Link>
-        </li>
-        <li>
-          <Link href="/dictionary">Dictionary</Link>
-        </li>
-        <li>
-          <Link href="/documents">Documents</Link>
-        </li>
-        <li>
-          <Link href="/join">Join</Link>
-        </li>
-        <li>
-          <Link href="/news">News</Link>
-        </li>
-        <li>
-          <Link href="/projects">Projects</Link>
-        </li>
-        <li>
-          <Link href="/team">Team</Link>
-        </li>
-      </ul>
-    </nav>
+    <Wrapper>
+      <Item route={AppRoutes.Contacts} label="Contacts" />
+      <Item route={AppRoutes.Dictionary} label="Dictionary" />
+      <Item route={AppRoutes.Documents} label="Documents" />
+      <Item route={AppRoutes.Join} label="Join" />
+      <Item route={AppRoutes.News} label="News" />
+      <Item route={AppRoutes.Projects} label="Projects" />
+      <Item route={AppRoutes.Team} label="Team" />
+    </Wrapper>
   );
 }
