@@ -1,0 +1,1 @@
+export { withSnackbarProvider } from './withSnackbarProvider';
