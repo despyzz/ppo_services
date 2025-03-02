@@ -10,12 +10,9 @@ export enum AppRoutes {
 }
 
 export const NAVIGATION_CONFIG = {
-  [AppRoutes.Home]: 'Home',
-  [AppRoutes.Contacts]: 'Contacts',
-  [AppRoutes.Dictionary]: 'Dictionary',
-  [AppRoutes.Documents]: 'Documents',
-  [AppRoutes.Join]: 'Join',
-  [AppRoutes.News]: 'News',
-  [AppRoutes.Projects]: 'Projects',
-  [AppRoutes.Team]: 'Team',
+  [AppRoutes.Home]: 'Главная',
+  [AppRoutes.Documents]: 'Документы',
+  [AppRoutes.Dictionary]: 'Справочник',
+  [AppRoutes.Projects]: 'Проекты',
+  [AppRoutes.Contacts]: 'Контакты',
 };

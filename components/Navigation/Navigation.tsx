@@ -1,14 +1,60 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NAVIGATION_CONFIG } from '@/constants';
-import { Item } from './Item';
-import { Wrapper } from './Wrapper';
+import Link from 'next/link';
+import { Box, SwipeableDrawer } from '@mui/material';
+import { isMobile, isTablet } from 'react-device-detect';
+import { Logo } from './components/Logo';
+import { JoinButton } from './components/JoinButton';
+import { BurgerMenu } from './components/BurgerMenu';
+import { NavigationItems } from './components/NavigationItems';
+import { CrossIcon } from './components/CrossIcon';
+import { Divider } from './components/Divider';
 
 export function Navigation() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const toggleMenu = () => setIsMenuOpen((prevState) => !prevState);
+
+  const headerClassName = 'flex w-full items-center px-5 h-[42px] lg:h-[108px]';
+
   return (
-    <Wrapper>
-      {Object.entries(NAVIGATION_CONFIG).map(([route, label]) => (
-        <Item key={route} route={route} label={label} />
-      ))}
-    </Wrapper>
+    <div className="relative">
+      <div className={`${headerClassName} justify-between`}>
+        <Logo />
+        <Divider />
+        <NavigationItems />
+        <JoinButton />
+        <BurgerMenu onClick={toggleMenu} />
+      </div>
+
+      {(isMobile || isTablet) && (
+      <SwipeableDrawer
+        open={isMenuOpen}
+        onOpen={toggleMenu}
+        onClose={toggleMenu}
+        anchor="top"
+        disableSwipeToOpen={!(isMobile || isTablet)}
+      >
+        <div className="flex flex-col gap-[10px]">
+          <div className={`${headerClassName} justify-end`}>
+            <CrossIcon onClick={toggleMenu} />
+          </div>
+
+          {/* Menu items */}
+          <ul className="flex flex-col gap-[25px] py-[15px]">
+            {Object.entries(NAVIGATION_CONFIG).map(([route, label]) => (
+              <li key={route}>
+                <Link href={route} onClick={toggleMenu}>
+                  <Box className="flex flex-row w-full px-5 justify-between text-xl font-extrabold">
+                    <p>{label}</p>
+                    <p>{'>'}</p>
+                  </Box>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </SwipeableDrawer>
+      )}
+    </div>
   );
 }
