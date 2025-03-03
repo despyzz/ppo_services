@@ -2,52 +2,9 @@
 
 import React from 'react';
 import Image from 'next/image';
-import {
-  Accordion as MuiAccordion,
-  AccordionDetails as MuiAccordionDetails,
-  AccordionProps,
-  AccordionSummary as MuiAccordionSummary, accordionSummaryClasses,
-  AccordionSummaryProps,
-  styled,
-} from '@mui/material';
-import AddIcon from '@mui/icons-material/Add';
-
-const Accordion = styled((props: AccordionProps) => (
-  <MuiAccordion disableGutters elevation={0} square {...props} />
-))(() => ({
-  '.MuiButtonBase-root': {
-    padding: 0,
-  },
-  '.MuiAccordionDetails-root': {
-    padding: '0 0 0 32px',
-  },
-  '&:not(:last-child)': {
-    borderBottom: 0,
-  },
-  '&::before': {
-    display: 'none',
-  },
-}));
-
-const AccordionSummary = styled((props: AccordionSummaryProps) => (
-  <MuiAccordionSummary
-    expandIcon={<AddIcon />}
-    {...props}
-  />
-))(({ theme }) => ({
-  flexDirection: 'row-reverse',
-  [`& .${accordionSummaryClasses.expandIconWrapper}.${accordionSummaryClasses.expanded}`]:
-    {
-      transform: 'rotate(45deg)',
-    },
-  [`& .${accordionSummaryClasses.content}`]: {
-    marginLeft: theme.spacing(1),
-  },
-}));
-
-const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
-  padding: theme.spacing(2),
-}));
+import { PPOAccordion } from '@/components/custom-mui/Accordion';
+import { PPOAccordionDetails } from '@/components/custom-mui/AccordionDetails';
+import { PPOAccordionSummary } from '@/components/custom-mui/AccordionSummary';
 
 export default function Dictionary() {
   return (
@@ -69,7 +26,7 @@ export default function Dictionary() {
 
       {/* Тело страницы */}
       <div className="w-full max-w-screen-xl px-5 py-[20px] lg:py-[50px]">
-        <div className="text-[25px] font-bold lg:text-[40px]">
+        <div className="text-[25px] font-bold lg:text-[48px]">
           О разделе
         </div>
 
@@ -83,127 +40,189 @@ export default function Dictionary() {
 
       {/* Студенту */}
       <div className="w-full max-w-screen-xl px-5 py-[20px] lg:py-[50px]">
-        <div className="text-[25px] font-bold lg:text-[40px]">
+        <div className="text-[25px] font-bold lg:text-[48px]">
           Бюджетнику
         </div>
 
-        <Accordion>
-          <AccordionSummary>
-            Государственная академическая стипендия
-          </AccordionSummary>
-          <AccordionDetails>
-            <p className="font-normal text-[14px] lg:text-[35px]">
-              ГАС зачисляется ежемесячно, как правило, 25 числа каждого месяца,
-              на стипендиальную карту студента. Никаких заявлений или сведений
-              на эту выплату подавать не нужно.
+        <PPOAccordion>
+          <PPOAccordionSummary>
+            <p className="font-extrabold text-[16px] lg:text-[42px]">
+              Государственная академическая стипендия
             </p>
+          </PPOAccordionSummary>
+          <PPOAccordionDetails>
+            <div className="flex flex-col gap-5 font-normal text-[14px] lg:text-[35px]">
+              <div>
+                <p>
+                  ГАС зачисляется ежемесячно, как правило, 25 числа каждого месяца,
+                  на стипендиальную карту студента. Никаких заявлений или сведений
+                  на эту выплату подавать не нужно.
+                </p>
+              </div>
 
-            <p className="font-normal text-[14px] lg:text-[35px]">
-              Кому: обучающимся по очной форме на бюджетной основе
-            </p>
+              <div>
+                <p>
+                  <span className="font-semibold">Кому:</span>
+                  {' '}
+                  обучающимся по очной форме на бюджетной основе
+                </p>
+              </div>
 
-            <p className="font-normal text-[14px] lg:text-[35px]">
-              Требование: по итогам сессии не иметь оценок «удовлетворительно»
-              и академических задолженностей
-            </p>
+              <div>
+                <p>
+                  <span className="font-semibold">Требование:</span>
+                  {' '}
+                  по итогам сессии не иметь оценок «удовлетворительно»
+                  и академических задолженностей
+                </p>
+              </div>
 
-            <p className="font-normal text-[14px] lg:text-[35px]">
-              1 семестр 1 курса — 2 200₽
-            </p>
-            <p className="font-normal text-[14px] lg:text-[35px]">
-              более половины оценок «хорошо» — 3 000₽
-            </p>
-            <p className="font-normal text-[14px] lg:text-[35px]">
-              половина и более оценок «отлично» — 4 500₽
-            </p>
+              <div>
+                <p>
+                  1 семестр 1 курса —
+                  {' '}
+                  <span className="font-semibold text-[#207EEB]">2 200₽</span>
+                </p>
+                <p>
+                  более половины оценок «хорошо» —
+                  {' '}
+                  <span className="font-semibold text-[#207EEB]">3 000₽</span>
+                </p>
+                <p>
+                  половина и более оценок «отлично» —
+                  {' '}
+                  <span className="font-semibold text-[#207EEB]">4 500₽</span>
+                </p>
+              </div>
 
-            <p className="font-normal text-[14px] lg:text-[35px]">
-              Далее размер выплат изменяется в зависимости от количества
-              закрытых сессий подряд только на «отлично»:
-            </p>
+              <div>
+                <p>
+                  Далее размер выплат изменяется в зависимости от количества
+                  закрытых сессий
+                  {' '}
+                  <span className="font-semibold">подряд</span>
+                  {' '}
+                  только на «отлично»:
+                </p>
+              </div>
 
-            <p>
-              1 сессия — 6 000₽
-            </p>
-            <p>
-              2-3 сессий — 7 500₽
-            </p>
-            <p>
-              4-5 сессий — 10 500₽
-            </p>
-            <p>
-              6 и более сессий — 13 500₽
-            </p>
-          </AccordionDetails>
-        </Accordion>
+              <div>
+                <p>
+                  1 сессия —
+                  {' '}
+                  <span className="font-semibold text-[#207EEB]">6 000₽</span>
+                </p>
+                <p>
+                  2-3 сессий —
+                  {' '}
+                  <span className="font-semibold text-[#207EEB]">7 500₽</span>
+                </p>
+                <p>
+                  4-5 сессий —
+                  {' '}
+                  <span className="font-semibold text-[#207EEB]">10 500₽</span>
+                </p>
+                <p>
+                  6 и более сессий —
+                  {' '}
+                  <span className="font-semibold text-[#207EEB]">13 500₽</span>
+                </p>
+              </div>
+            </div>
+          </PPOAccordionDetails>
+        </PPOAccordion>
 
-        <div className="text-[25px] font-bold lg:text-[40px]">
+        <div className="text-[25px] font-bold lg:text-[48px]">
           Платнику
         </div>
 
-        <Accordion>
-          <AccordionSummary>
-            Государственная академическая стипендия
-          </AccordionSummary>
-          <AccordionDetails>
-            <p className="font-normal text-[14px] lg:text-[35px]">
-              ГАС зачисляется ежемесячно, как правило, 25 числа каждого месяца,
-              на стипендиальную карту студента. Никаких заявлений или сведений
-              на эту выплату подавать не нужно.
+        <PPOAccordion>
+          <PPOAccordionSummary>
+            <p className="font-extrabold text-[16px] lg:text-[42px]">
+              Государственная академическая стипендия
             </p>
+          </PPOAccordionSummary>
+          <PPOAccordionDetails>
+            <div className="flex flex-col gap-5 font-normal text-[14px] lg:text-[35px]">
+              <div>
+                <p>
+                  ГАС зачисляется ежемесячно, как правило, 25 числа каждого месяца,
+                  на стипендиальную карту студента. Никаких заявлений или сведений
+                  на эту выплату подавать не нужно.
+                </p>
+              </div>
 
-            <p className="font-normal text-[14px] lg:text-[35px]">
-              Кому: обучающимся по очной форме на бюджетной основе
-            </p>
+              <div>
+                <p>
+                  <span className="font-semibold">Кому:</span>
+                  {' '}
+                  обучающимся по очной форме на бюджетной основе
+                </p>
+              </div>
 
-            <p className="font-normal text-[14px] lg:text-[35px]">
-              Требование: по итогам сессии не иметь оценок «удовлетворительно»
-              и академических задолженностей
-            </p>
+              <div>
+                <p>
+                  <span className="font-semibold">Требование:</span>
+                  {' '}
+                  по итогам сессии не иметь оценок «удовлетворительно»
+                  и академических задолженностей
+                </p>
+              </div>
 
-            <p className="font-normal text-[14px] lg:text-[35px]">
-              1 семестр 1 курса — 2 200₽
-            </p>
-            <p className="font-normal text-[14px] lg:text-[35px]">
-              более половины оценок «хорошо» — 3 000₽
-            </p>
-            <p className="font-normal text-[14px] lg:text-[35px]">
-              половина и более оценок «отлично» — 4 500₽
-            </p>
+              <div>
+                <p>
+                  1 семестр 1 курса —
+                  {' '}
+                  <span className="font-semibold text-[#207EEB]">2 200₽</span>
+                </p>
+                <p>
+                  более половины оценок «хорошо» —
+                  {' '}
+                  <span className="font-semibold text-[#207EEB]">3 000₽</span>
+                </p>
+                <p>
+                  половина и более оценок «отлично» —
+                  {' '}
+                  <span className="font-semibold text-[#207EEB]">4 500₽</span>
+                </p>
+              </div>
 
-            <p className="font-normal text-[14px] lg:text-[35px]">
-              Далее размер выплат изменяется в зависимости от количества
-              закрытых сессий подряд только на «отлично»:
-            </p>
+              <div>
+                <p>
+                  Далее размер выплат изменяется в зависимости от количества
+                  закрытых сессий
+                  {' '}
+                  <span className="font-semibold">подряд</span>
+                  {' '}
+                  только на «отлично»:
+                </p>
+              </div>
 
-            <p>
-              1 сессия — 6 000₽
-            </p>
-            <p>
-              2-3 сессий — 7 500₽
-            </p>
-            <p>
-              4-5 сессий — 10 500₽
-            </p>
-            <p>
-              6 и более сессий — 13 500₽
-            </p>
-          </AccordionDetails>
-        </Accordion>
-      </div>
-
-      {/* Работнику */}
-      <div className="w-full max-w-screen-xl px-5 py-[20px] lg:py-[50px]">
-        <div className="text-[25px] font-bold lg:text-[40px]">
-          О разделе
-        </div>
-
-        <p className="font-normal text-[14px] mt-[5px] lg:text-[35px]">
-          В этом разделе вы найдете нужные справочные материалы.
-          Мы собрали всю необходимую информацию в удобном формате,
-          чтобы вы могли легко найти ответы на свои вопросы.
-          Все, что нужно, теперь под рукой!
-        </p>
+              <div>
+                <p>
+                  1 сессия —
+                  {' '}
+                  <span className="font-semibold text-[#207EEB]">6 000₽</span>
+                </p>
+                <p>
+                  2-3 сессий —
+                  {' '}
+                  <span className="font-semibold text-[#207EEB]">7 500₽</span>
+                </p>
+                <p>
+                  4-5 сессий —
+                  {' '}
+                  <span className="font-semibold text-[#207EEB]">10 500₽</span>
+                </p>
+                <p>
+                  6 и более сессий —
+                  {' '}
+                  <span className="font-semibold text-[#207EEB]">13 500₽</span>
+                </p>
+              </div>
+            </div>
+          </PPOAccordionDetails>
+        </PPOAccordion>
       </div>
     </div>
   );
