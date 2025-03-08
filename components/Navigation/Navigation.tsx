@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NAVIGATION_CONFIG } from '@/constants';
 import Link from 'next/link';
-import { Box, SwipeableDrawer } from '@mui/material';
+import { Box, Drawer } from '@mui/material';
 import { isMobile, isTablet } from 'react-device-detect';
 import { Logo } from './components/Logo';
 import { JoinButton } from './components/JoinButton';
@@ -27,12 +27,10 @@ export function Navigation() {
       </div>
 
       {(isMobile || isTablet) && (
-      <SwipeableDrawer
+      <Drawer
         open={isMenuOpen}
-        onOpen={toggleMenu}
         onClose={toggleMenu}
         anchor="top"
-        disableSwipeToOpen={!(isMobile || isTablet)}
       >
         <div className="flex flex-col gap-[10px]">
           <div className={`${headerClassName} justify-end`}>
@@ -53,7 +51,7 @@ export function Navigation() {
             ))}
           </ul>
         </div>
-      </SwipeableDrawer>
+      </Drawer>
       )}
     </div>
   );

@@ -8,7 +8,7 @@ export const PPOAccordion = styled((props: AccordionProps) => (
     padding: 0,
   },
   '.MuiAccordionDetails-root': {
-    padding: '0 0 0 32px',
+    padding: '0 0 0 24px',
     '@media (min-width:1024px)': {
       padding: '0 0 0 40px',
     },

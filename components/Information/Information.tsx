@@ -7,7 +7,7 @@ import { links } from './links';
 export function Information({ className } : { className?: string }) {
   const currentYear = moment().year();
   return (
-    <div className={`w-full px-5 py-[10px] text-[#353945] ${className}`}>
+    <div className={`w-full px-5 py-[10px] lg:py-[42px] text-[#353945] ${className}`}>
       <Box className="flex flex-col gap-6">
         <Typography variant="h3" className="font-extrabold text-[20px] lg:text-[24px]">
           Контакты
