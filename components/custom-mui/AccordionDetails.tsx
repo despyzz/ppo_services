@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 export const PPOAccordionDetails = styled(({ className, ...otherProps }: AccordionDetailsProps) => (
   <MuiAccordionDetails
-    className={classNames(className, 'font-normal text-[14px] lg:text-[26px]')}
+    className={classNames(className, 'font-normal text-[14px] lg:text-[26px] lg:leading-<1.2>')}
     {...otherProps}
   />
 ))(({ theme }) => ({
