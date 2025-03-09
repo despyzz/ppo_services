@@ -3,13 +3,8 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { Box } from '@mui/material';
+import { TargetAudienceEnum } from '@/lib/models';
 import { EmployeeTab, NotSelectedTab, StudentTab } from './_tabs';
-
-enum TargetAudienceEnum {
-  EMPLOYEE,
-  STUDENT,
-  NOT_SELECTED,
-}
 
 export default function Dictionary() {
   const [currentTab, setCurrentTab] = useState<TargetAudienceEnum>(TargetAudienceEnum.NOT_SELECTED);
@@ -19,6 +14,13 @@ export default function Dictionary() {
       {/* Изображение */}
       <div className="relative w-full h-[206px] lg:h-[342px]">
         <Image src="/images/pages/dictionary_image.jpg" fill alt="Dictionary image." className="object-cover" />
+        <div className="absolute flex justify-center top-0 bottom-0 right-0 left-0">
+          <div className="flex items-center w-full max-w-screen-xl px-5">
+            <p className="text-white font-bold text-[30px] lg:text-[64px]">
+              Просто о сложном
+            </p>
+          </div>
+        </div>
       </div>
 
       {/* Выбор типа информации */}
