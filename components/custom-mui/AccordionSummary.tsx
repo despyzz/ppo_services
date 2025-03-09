@@ -11,7 +11,7 @@ import classNames from 'classnames';
 export const PPOAccordionSummary = styled(({ className, ...otherProps }: AccordionSummaryProps) => (
   <MuiAccordionSummary
     expandIcon={(
-      <div className="relative w-[16px] h-[16px] lg:w-[32px] lg:h-[32px]">
+      <div className="relative size-[16px] lg:size-[32px]">
         <Image src="/icons/expand_icon.svg" alt="Expand option" fill />
       </div>
     )}

@@ -12,11 +12,11 @@ export default function Dictionary() {
   return (
     <div className="flex flex-col items-center">
       {/* Изображение */}
-      <div className="relative w-full h-[206px] lg:h-[342px]">
+      <div className="relative h-[206px] w-full lg:h-[342px]">
         <Image src="/images/pages/dictionary_image.jpg" fill alt="Dictionary image." className="object-cover" />
-        <div className="absolute flex justify-center top-0 bottom-0 right-0 left-0">
-          <div className="flex items-center w-full max-w-screen-xl px-5">
-            <p className="text-white font-bold text-[30px] lg:text-[64px]">
+        <div className="absolute inset-0 flex justify-center">
+          <div className="flex w-full max-w-screen-xl items-center px-5">
+            <p className="text-[30px] font-bold text-white lg:text-[64px]">
               Просто о сложном
             </p>
           </div>
@@ -27,7 +27,7 @@ export default function Dictionary() {
       <div className="flex w-full text-[20px] lg:text-[35px]">
         <Box
           onClick={() => setCurrentTab(TargetAudienceEnum.EMPLOYEE)}
-          className={`flex items-center justify-center flex-1 text-center h-[52px] lg:h-[106px] transition-colors border-2 border-[#F34252]
+          className={`flex h-[52px] flex-1 items-center justify-center border-2 border-[#F34252] text-center transition-colors lg:h-[106px]
             ${currentTab !== TargetAudienceEnum.EMPLOYEE
             ? 'bg-[#F34252] text-[#ffffff]'
             : 'bg-[#ffffff] text-[#F34252]'}
@@ -37,7 +37,7 @@ export default function Dictionary() {
         </Box>
         <Box
           onClick={() => setCurrentTab(TargetAudienceEnum.STUDENT)}
-          className={`flex items-center justify-center flex-1 text-center h-[52px] lg:h-[106px] transition-colors border-2 border-[#207EEB]
+          className={`flex h-[52px] flex-1 items-center justify-center border-2 border-[#207EEB] text-center transition-colors lg:h-[106px]
             ${currentTab !== TargetAudienceEnum.STUDENT
             ? 'bg-[#207EEB] text-[#ffffff]'
             : 'bg-[#ffffff] text-[#207EEB]'}

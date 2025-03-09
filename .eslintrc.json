@@ -3,7 +3,8 @@
     "next/core-web-vitals",
     "next/typescript",
     "airbnb",
-    "airbnb-typescript"
+    "airbnb-typescript",
+    "plugin:tailwindcss/recommended"
   ],
   "parserOptions": {
     "project": "./tsconfig.json"

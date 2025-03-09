@@ -46,21 +46,21 @@ export default function RootLayout({
 
   const app = flowRight(...providers)(
     <>
-      <header className="stickky top-0 w-full max-w-screen-xl">
+      <header className="sticky top-0 z-10 flex w-full justify-center bg-white shadow">
         <Navigation />
       </header>
       <main className="w-full flex-1">
         {children}
       </main>
       <footer className="w-full bg-[#F4F5F6]">
-        <Information className="w-full max-w-screen-xl mx-auto" />
+        <Information className="mx-auto w-full max-w-screen-xl" />
       </footer>
     </>,
   );
 
   return (
     <html lang="en" className={gilroy.className}>
-      <body className="flex flex-col h-full min-h-dvh items-center">
+      <body className="flex h-full min-h-dvh flex-col items-center">
         {app}
       </body>
     </html>

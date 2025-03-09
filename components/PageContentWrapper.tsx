@@ -4,7 +4,7 @@ export function PPOPageContentWrapper({ children } : Readonly<{
   children: ReactNode;
 }>) {
   return (
-    <div className="flex flex-col gap-[30px] lg:gap-[50px] w-full max-w-screen-xl px-5 py-[20px] lg:py-[50px]">
+    <div className="flex w-full max-w-screen-xl flex-col gap-[30px] px-5 py-[20px] lg:gap-[50px] lg:py-[50px]">
       {children}
     </div>
   );

@@ -5,7 +5,7 @@ export function JoinButton() {
   return (
     <Button
       variant="black"
-      className="!hidden lg:!flex w-[207px] h-[57px] whitespace-pre-line text-center"
+      className="!hidden h-[57px] w-[207px] whitespace-pre-line text-center lg:!flex"
     >
       Вступить в
       {'\n'}

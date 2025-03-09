@@ -17,7 +17,7 @@ export function Navigation() {
   const headerClassName = 'flex w-full items-center px-5 h-[42px] lg:h-[108px]';
 
   return (
-    <div className="relative">
+    <div className="relative w-full max-w-screen-xl">
       <div className={`${headerClassName} justify-between`}>
         <Logo />
         <Divider />
@@ -42,7 +42,7 @@ export function Navigation() {
             {Object.entries(NAVIGATION_CONFIG).map(([route, label]) => (
               <li key={route}>
                 <Link href={route} onClick={toggleMenu}>
-                  <Box className="flex flex-row w-full px-5 justify-between text-xl font-extrabold">
+                  <Box className="flex w-full flex-row justify-between px-5 text-xl font-extrabold">
                     <p>{label}</p>
                     <p>{'>'}</p>
                   </Box>
