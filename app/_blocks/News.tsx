@@ -11,7 +11,7 @@ interface NewsElementProps {
 }
 
 const VariantsToAspectRatio = {
-  [NewsElementVariants.Square]: 'w-[300px]',
+  [NewsElementVariants.Square]: 'w-[clamp(144px,_35vw,_375px)]',
   [NewsElementVariants.Rectangle]: 'aspect-[2/1]',
 };
 
