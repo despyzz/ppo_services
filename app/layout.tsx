@@ -6,6 +6,7 @@ import { Information, Navigation } from '@/components';
 import { withSnackbarProvider } from '@/lib/providers';
 import { flowRight } from 'lodash-es';
 import { withThemeProvider } from '@/lib/providers/withThemeProvider';
+import { AnimatePresence } from 'framer-motion';
 
 import localFont from 'next/font/local';
 
@@ -50,7 +51,9 @@ export default function RootLayout({
         <Navigation />
       </header>
       <main className="w-full flex-1">
-        {children}
+        <AnimatePresence mode="wait">
+          {children}
+        </AnimatePresence>
       </main>
       <footer className="w-full bg-[#F4F5F6]">
         <Information className="mx-auto w-full max-w-screen-xl" />

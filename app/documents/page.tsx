@@ -1,9 +1,12 @@
+'use client';
+
 import React from 'react';
+import { PageTransition } from '@/components';
 
 export default function Documents() {
   return (
-    <div>
+    <PageTransition>
       Documents page
-    </div>
+    </PageTransition>
   );
 }

@@ -1,11 +1,12 @@
 'use client';
 
 import React from 'react';
+import { PageTransition } from '@/components';
 
 export default function GlobalErrorPage() {
   return (
-    <div>
+    <PageTransition>
       Global Error Page
-    </div>
+    </PageTransition>
   );
 }

@@ -1,15 +1,17 @@
+'use client';
+
+import React from 'react';
 import {
-  PPOAccordion, PPOAccordionDetails,
+  PPOAccordion,
+  PPOAccordionDetails,
   PPOAccordionSummary,
   PPOListTitle,
-  PPOListWrapper,
-  PPOPageContentWrapper,
+  PPOListWrapper, PPOPageContentWrapper,
   PPOSectionWrapper,
 } from '@/components';
 import Link from 'next/link';
-import React from 'react';
 
-export function StudentTab() {
+export default function StudentPage() {
   return (
     <PPOPageContentWrapper>
 

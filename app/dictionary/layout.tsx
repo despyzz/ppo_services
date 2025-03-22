@@ -1,28 +1,34 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { ReactNode, useState } from 'react';
+import Image from 'next/image';
 import { TargetAudienceEnum } from '@/lib/models';
-import { About } from '@/app/_blocks/About';
 import { PageTransition } from '@/components';
 import Link from 'next/link';
-import { Partners, News } from './_blocks';
+import { usePathname } from 'next/navigation';
 
-export default function Home() {
-  const [currentTab, setCurrentTab] = useState<TargetAudienceEnum>(TargetAudienceEnum.NOT_SELECTED);
+const StateByPathname: Record<string, TargetAudienceEnum> = {
+  '/dictionary': TargetAudienceEnum.NOT_SELECTED,
+  '/dictionary/employee': TargetAudienceEnum.EMPLOYEE,
+  '/dictionary/student': TargetAudienceEnum.STUDENT,
+};
+
+export default function DictionaryLayout({ children } : Readonly<{
+  children: ReactNode;
+}>) {
+  const pathname = usePathname();
+  const [currentTab, setCurrentTab] = useState<TargetAudienceEnum>(StateByPathname[pathname]);
 
   return (
     <PageTransition>
-      <div className="flex flex-col items-center max-lg:h-[calc(100dvh-42px)] lg:h-auto">
-        {/* Видео */}
-        <div className="relative h-[206px] w-full flex-1 lg:h-[552px] lg:flex-initial">
-          <div className="h-full bg-gray-300 object-cover" />
-          <div className="absolute inset-0 ">
-            <div className="mt-[50dvh] max-w-[800px] px-[24px] lg:ml-[42%] lg:mt-[177px]">
-              <p className="text-[32px] font-bold leading-[38px] lg:text-[64px] lg:leading-[64px]">
-                Профорганизация Московского Политеха
-              </p>
-              <p className="text-[12px] lg:text-[24px]">
-                Стремление к совершенству
+      <div className="flex flex-col items-center">
+        {/* Изображение */}
+        <div className="relative h-[206px] w-full lg:h-[342px]">
+          <Image src="/images/pages/dictionary_image.jpg" fill alt="Dictionary image." className="object-cover" />
+          <div className="absolute inset-0 flex justify-center">
+            <div className="flex w-full max-w-screen-xl items-center px-5">
+              <p className="text-[30px] font-bold text-white lg:text-[64px]">
+                Просто о сложном
               </p>
             </div>
           </div>
@@ -53,11 +59,7 @@ export default function Home() {
             <p>Студенту</p>
           </Link>
         </div>
-      </div>
-      <div className="flex flex-col gap-[30px] py-[30px] lg:gap-[50px] lg:py-[50px]">
-        <About />
-        <News />
-        <Partners />
+        {children}
       </div>
     </PageTransition>
   );

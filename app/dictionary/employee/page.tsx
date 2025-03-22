@@ -1,9 +1,11 @@
+'use client';
+
+import React from 'react';
 import {
   PPOListTitle, PPOListWrapper, PPOPageContentWrapper, PPOSectionWrapper,
 } from '@/components';
-import React from 'react';
 
-export function EmployeeTab() {
+export default function EmployeePage() {
   return (
     <PPOPageContentWrapper>
 

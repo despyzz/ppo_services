@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import { NAVIGATION_CONFIG } from '@/constants';
 import Link from 'next/link';
