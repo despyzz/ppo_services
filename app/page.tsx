@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { TargetAudienceEnum } from '@/lib/models';
-import { About } from '@/app/_blocks/About';
+import { About } from '@/app/_blocks/about/About';
 import { PageTransition } from '@/components';
 import Link from 'next/link';
 import { Partners, News } from './_blocks';

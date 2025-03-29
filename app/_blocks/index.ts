@@ -1,3 +1,3 @@
-export { News } from './News';
+export { News } from './news/News';
 export { Partners } from './Partners';
-export { About } from './About';
+export { About } from './about';
