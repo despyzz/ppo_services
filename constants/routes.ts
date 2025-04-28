@@ -14,5 +14,6 @@ export const NAVIGATION_CONFIG = {
   [AppRoutes.Documents]: 'Документы',
   [AppRoutes.Dictionary]: 'Справочник',
   [AppRoutes.Projects]: 'Проекты',
-  [AppRoutes.Contacts]: 'Контакты',
+  [AppRoutes.Team]: 'Команда',
+  [AppRoutes.News]: 'Новости',
 };

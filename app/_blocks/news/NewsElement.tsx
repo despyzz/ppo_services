@@ -8,7 +8,7 @@ interface NewsElementProps {
   variant: NewsElementVariants;
   src: string;
   alt: string;
-  colorAccent: string; // Теперь это цвет без прозрачности (например, #3b82f6)
+  colorAccent: string;
   title: string;
   description: string;
   date: string;

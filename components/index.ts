@@ -3,6 +3,7 @@ export * from './Information';
 export {
   PPOAccordion,
   PPOAccordionSummary,
+  PPOAccordionImageSummary,
   PPOAccordionDetails,
 } from './custom-mui';
 export { PPOPageContentWrapper } from './PageContentWrapper';
