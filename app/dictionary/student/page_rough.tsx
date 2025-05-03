@@ -465,6 +465,464 @@ export default function StudentPage() {
               </div>
             </PPOAccordionDetails>
           </PPOAccordion>
+
+          <PPOAccordion>
+            <PPOAccordionSummary>
+              <p>
+                Оплата обучения
+              </p>
+            </PPOAccordionSummary>
+            <PPOAccordionDetails>
+              <div className="flex flex-col gap-5">
+                <div>
+                  <p>
+                    Оплата обучения в Московском Политехе 
+                    производится по следующему графику:
+                  </p>
+                </div>
+
+                <div>
+                  <p>
+                    <span className="font-semibold text-[#207EEB]">До 1 сентября</span>
+                    {' '}
+                    — осенний семестр
+                  </p>
+                  <p>
+                    <span className="font-semibold text-[#207EEB]">До 1 февраля</span>
+                    {' '}
+                    — весенний семестр
+                  </p>
+                </div>
+                
+                <div>
+                  <p>
+                    Оплата производится двумя способами:
+                  </p>
+                </div>
+
+                <div>
+                  <p>
+                    — На сайте
+                  </p>
+                  <p>
+                    — Через банкоматы, отделения банков
+                    и банковские приложения
+                  </p>
+                </div>
+              </div>
+            </PPOAccordionDetails>
+          </PPOAccordion>
+
+          <PPOAccordion>
+            <PPOAccordionSummary>
+              <p>
+                Скидка на оплату обучения
+              </p>
+            </PPOAccordionSummary>
+            <PPOAccordionDetails>
+              <div className="flex flex-col gap-5">
+                <div>
+                  <p>
+                    <span className="font-semibold">Срок действия скидки —</span>
+                    {' '}
+                    <span className="font-semibold text-[#207EEB]">1 год.</span>
+                  </p>
+                </div>
+
+                <div>
+                  <p>
+                    <span className="font-semibold">Кому назначается:</span>
+                  </p>
+                </div>
+
+                <div>
+                  <p>
+                    — Детям-сиротам и детям, оставшимся
+                    без попечения родителей
+                  </p>
+                  <p>
+                    — Инвалидам 1 и 2 групп
+                    и инвалидам с детства
+                  </p>
+                  <p>
+                    — Лицам, пострадавшим в результате аварии
+                    на Чернобыльской АЭС и иных рад. катастроф
+                  </p>
+                  <p>
+                    — Работникам и детям работников вуза
+                  </p>
+                  <p>
+                    — Получающим государственную
+                    социальную помощь
+                  </p>
+                  <p>
+                    — Участникам СВО и детям участников СВО
+                  </p>
+                </div>
+
+                <div>
+                  <p>
+                    <span className="font-semibold">Требования:</span>
+                  </p>
+                </div>
+
+                <div>
+                  <p>
+                    — Отсутствие задолженностей
+                    по оплате обучения
+                  </p>
+                  <p>
+                    — Отсутствие дисциплинарных взысканий
+                  </p>
+                  <p>
+                    — Отсутствие академических задолженностей
+                  </p>
+                </div>
+              </div>
+            </PPOAccordionDetails>
+          </PPOAccordion>
+          <PPOAccordion>
+            <PPOAccordionSummary>
+              <p>
+                Отсрочка или рассрочка оплаты обучения
+              </p>
+            </PPOAccordionSummary>
+            <PPOAccordionDetails>
+              <div className="flex flex-col gap-5">
+                <div>
+                  <p>
+                   <span className="font-semibold">Основания:</span>
+                  </p>
+                </div>
+
+                <div>
+                  <p>
+                    — Материальные или финансовые затруднения
+                  </p>
+                  <p>
+                    — Принадлежность к льготной категории граждан
+                  </p>
+                </div>
+
+                <div>
+                  <p>
+                   <span className="font-semibold">Требования:</span>
+                  </p>
+                </div>
+
+                <div>
+                  <p>
+                    — Отсутствие задолженностей по оплате
+                    в предыдущие платёжные периоды
+                  </p>
+                  <p>
+                    — Внесение 1/3 стоимости
+                    образовательных услуг за семестр
+                  </p>
+                  <p>
+                    — Подача заявления
+                    {' '}
+                    <span className="font-semibold text-[#207EEB]">не позднее 5-ти рабочих дней</span>
+                    {' '}
+                    до окончания срока оплаты образовательных услуг
+                  </p>
+                </div>
+              </div>
+            </PPOAccordionDetails>
+          </PPOAccordion>
+        </PPOListWrapper>
+      </PPOSectionWrapper>
+
+      <PPOSectionWrapper>
+        <PPOListTitle>
+          Иностранцу
+        </PPOListTitle>
+
+        <PPOListWrapper>
+          <PPOAccordion>
+            <PPOAccordionSummary>
+              <p>
+                Оформление регистрации
+              </p>
+            </PPOAccordionSummary>
+            <PPOAccordionDetails>
+              <div className="flex flex-col gap-5">
+                <div>
+                  <p>
+                    Иностранный отдел осуществляет постановку на
+                    миграционный учёт только тех иностранных
+                    граждан, которые
+                    {' '}
+                    <span className="font-semibold">проживают в общежитии,</span>
+                    {' '}
+                    остальные студенты обязаны
+                    {' '}
+                    <span className="font-semibold">самостоятельно оформить регистрацию</span>
+                    {' '}
+                    по месту своего фактического пребывания, соблюдая все
+                    установленные законодательством РФ сроки и предоставить
+                    копию регистрационных документов в
+                    {' '}
+                    <span className="font-semibold">кабинет В-102.</span>
+                  </p>
+                </div>
+              </div>
+            </PPOAccordionDetails>
+          </PPOAccordion>
+
+          <PPOAccordion>
+            <PPOAccordionSummary>
+              <p>
+                Продление визы
+              </p>
+            </PPOAccordionSummary>
+            <PPOAccordionDetails>
+              <div className="flex flex-col gap-5">
+                <div>
+                  <p>
+                    Для продления визы иностранный гражданин
+                    {' '}
+                    <span className="font-semibold">обязан лично</span>
+                    {' '}
+                    явиться
+                    {' '}
+                    <span className="font-semibold">в иностранный отдел (В-102)
+                      не позднее, чем
+                      {' '}
+                      <span className="font-semibold text-[#207EEB]">за 1.5 месяца</span>
+                      {' '}
+                      до окончания срока действия визы и предоставить:
+                    </span>
+                  </p>
+                </div>
+
+                <div>
+                  <p>
+                    - анкета (подписывается иностранным гражданином лично)
+                  </p>
+                  <p>
+                    - фото 3х4 (1 шт.)
+                  </p>
+                  <p>
+                    - документ, удостоверяющий личность (паспорт)
+                  </p>
+                  <p>
+                    - миграционная карта
+                  </p>
+                  <p>
+                    - регистрация
+                  </p>
+                  <p>
+                    - документ об уплате государственной пошлины
+                  </p>
+                  <p>
+                    - документ об оплате текущего семестра 
+                    
+                    (для обучающихся на платной основе).
+                  </p>
+                </div>
+              </div>
+            </PPOAccordionDetails>
+          </PPOAccordion>
+
+          <PPOAccordion>
+            <PPOAccordionSummary>
+              <p>
+                Изменение места проживания
+              </p>
+            </PPOAccordionSummary>
+            <PPOAccordionDetails>
+              <div className="flex flex-col gap-5">
+                <div>
+                  <p>
+                    <span className="font-semibold">При переезде с одного адреса на другой,</span>
+                    {' '}
+                    либо смене общежития
+                    {' '}
+                    <span className="font-semibold">необходимо сообщить</span>
+                    {' '}
+                    об этом
+                    {' '}
+                    <span className="font-semibold">в иностранный отдел
+                      (В-102)
+                      {' '}
+                      <span className="font-semibold text-[#207EEB]">в течение трёх рабочих дней.</span>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </PPOAccordionDetails>
+          </PPOAccordion>
+
+          <PPOAccordion>
+            <PPOAccordionSummary>
+              <p>
+                Утрата документов
+              </p>
+            </PPOAccordionSummary>
+            <PPOAccordionDetails>
+              <div className="flex flex-col gap-5">
+                <div>
+                  <p>
+                    При утрате паспорта, миграционной карты, либо уведомления
+                    об установке на миграционный учёт иностранный гражданин
+                    обязан
+                    {' '}
+                    <span className="font-semibold">незамедлительно</span>
+                    {' '}
+                    обратиться в ближайшее отделение полиции по месту утраты
+                    или обнаружения пропажи документа для получения справки о
+                    происшествии, а также сообщить об этом в иностранный отдел
+                    {' '}
+                    <span className="font-semibold">(В-102).</span>
+                  </p>
+                </div>
+
+                <div>
+                  <p>
+                    Иностранный студент
+                    {' '}
+                    <span className="font-semibold">самостоятельно</span>
+                    {' '}
+                    принимает меры к восстановлению утраченных (похищенных) документов.
+                  </p>
+                </div>
+              </div>
+            </PPOAccordionDetails>
+          </PPOAccordion>
+
+          <PPOAccordion>
+            <PPOAccordionSummary>
+              <p>
+                Порядок подачи документов для
+                постановки на миграционный учёт
+              </p>
+            </PPOAccordionSummary>
+            <PPOAccordionDetails>
+              <div className="flex flex-col gap-5">
+                <div>
+                  <p>
+                    <span className="font-semibold text-[#207EEB]">В первый рабочий день</span>
+                    {' '}
+                    после пересечения границы РФ
+                    {' '}
+                    <span className="font-semibold">Вы обязаны</span>
+                    {' '}
+                    лично явиться в иностранный отдел (В-102) для
+                    оформления регистрации.
+                  </p>
+                  <p>
+                    Для продления регистрации надо обратиться в иностранный отдел -
+                    {' '}
+                    <span className="font-semibold text-[#207EEB]">за 25 календарных дней</span>
+                    {' '}
+                    до окончания срока действия регистрации.
+                  </p>
+                </div>
+
+                <div>
+                  <p>
+                    <span className="font-semibold">С собой надо будет взять:</span>
+                  </p>
+                </div>
+
+                <div>
+                  <p>
+                    - документ, удостоверяющий личность (паспорт)
+                  </p>
+                  <p>
+                    - ВНЖ или РВП (при наличии)
+                  </p>
+                  <p>
+                    - миграционная карта
+                  </p>
+                  <p>
+                    - действующая виза (для визовых стран)
+                  </p>
+                  <p>
+                    - действующая регистрация
+                  </p>
+                  <p>
+                    - дактилоскопия.
+                  </p>
+                </div>
+              </div>
+            </PPOAccordionDetails>
+          </PPOAccordion>
+
+          <PPOAccordion>
+            <PPOAccordionSummary>
+              <p>
+                Изменения сведений о виде или реквизитах документа
+              </p>
+            </PPOAccordionSummary>
+            <PPOAccordionDetails>
+              <div className="flex flex-col gap-5">
+                <div>
+                  <p>
+                    При внесениях изменений в сведения документа, удостоверяющего
+                    личность, подтверждающих его право на пребывание в РФ, а также
+                    его фамилии, имени, отчества, даты и места рождения, пола, либо
+                    гражданства иностранный студент
+                    {' '}
+                    <span className="font-semibold">обязан
+                      {' '}
+                      <span className="font-semibold text-[#207EEB]">в течение суток</span>
+                      {' '}
+                      сообщить о данных фактах
+                    </span>
+                    {' '}
+                    в иностранный отдел (В-102).
+                  </p>
+                </div>
+              </div>
+            </PPOAccordionDetails>
+          </PPOAccordion>
+
+          <PPOAccordion>
+            <PPOAccordionSummary>
+              <p>
+                Нотариально заверенный перевод
+              </p>
+            </PPOAccordionSummary>
+            <PPOAccordionDetails>
+              <div className="flex flex-col gap-5">
+                <div>
+                  <p>
+                    Не забудьте предоставить
+                    {' '}
+                    <span className="font-semibold">оригинал перевода паспорта</span>
+                    {' '}
+                    в иностранный отдел (В-102). Также он понадобится Вам при оформлении
+                    социальной карты студента, материальной помощи и дотации.
+                  </p>
+                </div>
+              </div>
+            </PPOAccordionDetails>
+          </PPOAccordion>
+
+          <PPOAccordion>
+            <PPOAccordionSummary>
+              <p>
+                Страховка, медосвидетельствование и дактилоскопия 
+              </p>
+            </PPOAccordionSummary>
+            <PPOAccordionDetails>
+              <div className="flex flex-col gap-5">
+                <div>
+                  <p>
+                    С первого дня пребывания в России у каждого иностранного
+                    гражданина должен быть оформлен
+                    {' '}
+                    <span className="font-semibold">страховой медицинский полис.</span>
+                    {' '}
+                    Оформить студенческий полис можно в любой страховой
+                    организации, либо через иностранный отдел (В-102).
+                  </p>
+                </div>
+              </div>
+            </PPOAccordionDetails>
+          </PPOAccordion>
         </PPOListWrapper>
       </PPOSectionWrapper>
 
