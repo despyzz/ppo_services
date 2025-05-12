@@ -9,7 +9,6 @@ import {
   PPOListWrapper, PPOPageContentWrapper,
   PPOSectionWrapper,
 } from '@/components';
-import Link from 'next/link';
 
 export default function StudentPage() {
   return (
@@ -135,7 +134,7 @@ export default function StudentPage() {
                   <p>
                     Заявление подается в
                     {' '}
-                    <a href="https://e.mospolytech.ru/#/" className="underline underline-offset-2" target="_blank">личном кабинете.</a>
+                    <a href="https://e.mospolytech.ru/#/" className="underline underline-offset-2" target="_blank" rel="noreferrer">личном кабинете.</a>
                   </p>
                   <p>
                     (Старый дизайн: «Справки, заявления»)
@@ -299,7 +298,8 @@ export default function StudentPage() {
                   <p>
                     Студенты, имеющие особые достижения в
                     {' '}
-                    <span className="font-semibold">учебной, научно-исследовательской, общественной,
+                    <span className="font-semibold">
+                      учебной, научно-исследовательской, общественной,
                       культурно-творческой и спортивной деятельностях,
                     </span>
                     {' '}
@@ -310,12 +310,12 @@ export default function StudentPage() {
 
                 <div>
                   <p>
-                  Размер стипендии —
-                  {' '}
-                  <span className="font-semibold text-[#207EEB]">2 200₽</span>
-                  {' '}
-                  ежемесячно, срок назначения — 6 месяцев. Назначение
-                  стипендии происходит на конкурсной основе.
+                    Размер стипендии —
+                    {' '}
+                    <span className="font-semibold text-[#207EEB]">2 200₽</span>
+                    {' '}
+                    ежемесячно, срок назначения — 6 месяцев. Назначение
+                    стипендии происходит на конкурсной основе.
                   </p>
                 </div>
               </div>
@@ -393,10 +393,11 @@ export default function StudentPage() {
                   <p>
                     Для перевода необходимо собрать
                     {' '}
-                    <span className="font-semibold">перечень документов: заполненное
+                    <span className="font-semibold">
+                      перечень документов: заполненное
                       (вручную)
                       {' '}
-                      <a href="https://mospolytech.ru/upload/medialibrary/617/j3kff61hjkbrsnydderr22tea2jio1de/Zayavlenie-na-izmenenie-usloviy-obucheniya.pdf" className="underline underline-offset-2" target="_blank">заявление</a>
+                      <a href="https://mospolytech.ru/upload/medialibrary/617/j3kff61hjkbrsnydderr22tea2jio1de/Zayavlenie-na-izmenenie-usloviy-obucheniya.pdf" className="underline underline-offset-2" target="_blank" rel="noreferrer">заявление</a>
                       {' '}
                       копия паспорта, документы с подтверждением индивидуальных
                       достижений (по желанию), копия зачетной книжки.
@@ -404,7 +405,8 @@ export default function StudentPage() {
                     {' '}
                     Если Вы относитесь к определенной категории, то надо отправить
                     {' '}
-                    <span className="font-semibold">документ, подтверждающий
+                    <span className="font-semibold">
+                      документ, подтверждающий
                       отнесение к определенным категориям.
                     </span>
                   </p>
@@ -415,7 +417,7 @@ export default function StudentPage() {
                     Собранные документы можно подать следующими способами:
                   </p>
                   <p>
-                    - лично по адресу: Москва, Б. Семеновская ул., 38, корпус Н, 
+                    - лично по адресу: Москва, Б. Семеновская ул., 38, корпус Н,
                     4 этаж, аудитория Н-408 с 13:45 до 17:00 в будние дни;
                   </p>
                   <p>
@@ -434,7 +436,7 @@ export default function StudentPage() {
                     <span className="font-semibold text-[#207EEB]">с 23 марта по 15 августа</span>
                     {' '}
                     (с возможным продлением до
-                      <span className="font-semibold">15 сентября</span>
+                    <span className="font-semibold">15 сентября</span>
                     ) — для обучения
                     {' '}
                     <span className="font-semibold">на осеннем семестре</span>
@@ -445,7 +447,7 @@ export default function StudentPage() {
                     <span className="font-semibold text-[#207EEB]">с 16 октября по 28 января</span>
                     {' '}
                     следующего года (с возможным продлением до
-                      <span className="font-semibold">20 февраля</span>
+                    <span className="font-semibold">20 февраля</span>
                     ) — для обучения
                     {' '}
                     <span className="font-semibold">на весеннем семестре</span>
@@ -458,12 +460,12 @@ export default function StudentPage() {
                   <p>
                     С наличием вакантных мест можно ознакомиться по
                     {' '}
-                    <a href="https://mospolytech.ru/postupayushchim/zapolnenie-vakantnyh-mest/kolichestvo-vakantnyh-mest-v-universitete/" className="underline underline-offset-2" target="_blank">ссылке.</a>
+                    <a href="https://mospolytech.ru/postupayushchim/zapolnenie-vakantnyh-mest/kolichestvo-vakantnyh-mest-v-universitete/" className="underline underline-offset-2" target="_blank" rel="noreferrer">ссылке.</a>
                   </p>
                   <p>
                     С результатом перевода можно ознакомиться по
                     {' '}
-                    <a href="https://mospolytech.ru/postupayushchim/zapolnenie-vakantnyh-mest/spiski-podavshih-zayavlenie-i-rezultaty-rassmotreniya/" className="underline underline-offset-2" target="_blank">ссылке.</a>
+                    <a href="https://mospolytech.ru/postupayushchim/zapolnenie-vakantnyh-mest/spiski-podavshih-zayavlenie-i-rezultaty-rassmotreniya/" className="underline underline-offset-2" target="_blank" rel="noreferrer">ссылке.</a>
                   </p>
                 </div>
               </div>
@@ -480,7 +482,7 @@ export default function StudentPage() {
               <div className="flex flex-col gap-5">
                 <div>
                   <p>
-                    Оплата обучения в Московском Политехе 
+                    Оплата обучения в Московском Политехе
                     производится по следующему графику:
                   </p>
                 </div>
@@ -497,7 +499,7 @@ export default function StudentPage() {
                     — весенний семестр
                   </p>
                 </div>
-                
+
                 <div>
                   <p>
                     Оплата производится двумя способами:
@@ -595,7 +597,7 @@ export default function StudentPage() {
               <div className="flex flex-col gap-5">
                 <div>
                   <p>
-                   <span className="font-semibold">Основания:</span>
+                    <span className="font-semibold">Основания:</span>
                   </p>
                 </div>
 
@@ -610,7 +612,7 @@ export default function StudentPage() {
 
                 <div>
                   <p>
-                   <span className="font-semibold">Требования:</span>
+                    <span className="font-semibold">Требования:</span>
                   </p>
                 </div>
 
@@ -690,7 +692,8 @@ export default function StudentPage() {
                     {' '}
                     явиться
                     {' '}
-                    <span className="font-semibold">в иностранный отдел (В-102)
+                    <span className="font-semibold">
+                      в иностранный отдел (В-102)
                       не позднее, чем
                       {' '}
                       <span className="font-semibold text-[#207EEB]">за 1.5 месяца</span>
@@ -720,8 +723,8 @@ export default function StudentPage() {
                     - документ об уплате государственной пошлины
                   </p>
                   <p>
-                    - документ об оплате текущего семестра 
-                    
+                    - документ об оплате текущего семестра
+
                     (для обучающихся на платной основе).
                   </p>
                 </div>
@@ -747,7 +750,8 @@ export default function StudentPage() {
                     {' '}
                     об этом
                     {' '}
-                    <span className="font-semibold">в иностранный отдел
+                    <span className="font-semibold">
+                      в иностранный отдел
                       (В-102)
                       {' '}
                       <span className="font-semibold text-[#207EEB]">в течение трёх рабочих дней.</span>
@@ -869,7 +873,8 @@ export default function StudentPage() {
                     его фамилии, имени, отчества, даты и места рождения, пола, либо
                     гражданства иностранный студент
                     {' '}
-                    <span className="font-semibold">обязан
+                    <span className="font-semibold">
+                      обязан
                       {' '}
                       <span className="font-semibold text-[#207EEB]">в течение суток</span>
                       {' '}
@@ -908,7 +913,7 @@ export default function StudentPage() {
           <PPOAccordion>
             <PPOAccordionSummary>
               <p>
-                Страховка, медосвидетельствование и дактилоскопия 
+                Страховка, медосвидетельствование и дактилоскопия
               </p>
             </PPOAccordionSummary>
             <PPOAccordionDetails>
@@ -969,7 +974,7 @@ export default function StudentPage() {
                   <p>
                     Необходимо соблюдать
                     {' '}
-                    <a href="https://mospolytech.ru/upload/files/obschejitie/Pravila-vnutrennego-rasporyadka-v-studencheskom-gorodke-Moskovskogo-Polytecha-(04082020).pdf" className="underline underline-offset-2" target="_blank">правила внутреннего распорядка.</a>
+                    <a href="https://mospolytech.ru/upload/files/obschejitie/Pravila-vnutrennego-rasporyadka-v-studencheskom-gorodke-Moskovskogo-Polytecha-(04082020).pdf" className="underline underline-offset-2" target="_blank" rel="noreferrer">правила внутреннего распорядка.</a>
                   </p>
                 </div>
 
@@ -1228,7 +1233,7 @@ export default function StudentPage() {
                     - Проверьте себя в
                     {' '}
                     <span className="font-semibold">
-                      <a href="https://www.mos.ru/karta-moskvicha/services/proverka-uchashhegosya-v-reestre-studentov/" className="underline underline-offset-2" target="_blank">Реестре студентов</a>
+                      <a href="https://www.mos.ru/karta-moskvicha/services/proverka-uchashhegosya-v-reestre-studentov/" className="underline underline-offset-2" target="_blank" rel="noreferrer">Реестре студентов</a>
                     </span>
                   </p>
                   <p>
@@ -1340,7 +1345,8 @@ export default function StudentPage() {
                     меры дисциплинарного взыскания, то вы можете
                     обжаловать его в
                     {' '}
-                    <span className="font-semibold">комиссии по урегулированию
+                    <span className="font-semibold">
+                      комиссии по урегулированию
                       споров между участниками образовательных отношений.
                     </span>
                     {' '}
@@ -1387,9 +1393,10 @@ export default function StudentPage() {
 
                 <div>
                   <p>
-                    <span className="font-semibold">Сумма выплаты:
-                    {' '}
-                    <span className="font-semibold text-[#207EEB]">14 400 р.</span>
+                    <span className="font-semibold">
+                      Сумма выплаты:
+                      {' '}
+                      <span className="font-semibold text-[#207EEB]">14 400 р.</span>
                     </span>
                     {' '}
                     в год.
