@@ -7,7 +7,7 @@ const newsItems = [
   {
     id: 1,
     variant: NewsElementVariants.Square,
-    src: '/images/pages/main/9l4N4CdkA8k 1.png',
+    src: '/images/pages/main/news/news_item.jpg',
     alt: 'Техническая конференция 2023',
     colorAccent: '#3b82f6',
     title: 'Итоги TechConf 2023',
@@ -17,7 +17,7 @@ const newsItems = [
   {
     id: 2,
     variant: NewsElementVariants.Rectangle,
-    src: '/images/pages/main/9l4N4CdkA8k 1.png',
+    src: '/images/pages/main/news/news_item.jpg',
     alt: 'Запуск нового продукта',
     colorAccent: '#10b981',
     title: 'Новый продукт выпущен',
@@ -27,7 +27,7 @@ const newsItems = [
   {
     id: 3,
     variant: NewsElementVariants.Square,
-    src: '/images/pages/main/9l4N4CdkA8k 1.png',
+    src: '/images/pages/main/news/news_item.jpg',
     alt: 'Корпоративное мероприятие',
     colorAccent: '#f59e0b',
     title: 'Наш летний тимбилдинг',
@@ -37,7 +37,7 @@ const newsItems = [
   {
     id: 4,
     variant: NewsElementVariants.Rectangle,
-    src: '/images/pages/main/9l4N4CdkA8k 1.png',
+    src: '/images/pages/main/news/news_item.jpg',
     alt: 'Благотворительный марафон',
     colorAccent: '#ef4444',
     title: 'Благотворительный забег',
@@ -47,7 +47,7 @@ const newsItems = [
   {
     id: 5,
     variant: NewsElementVariants.Square,
-    src: '/images/pages/main/9l4N4CdkA8k 1.png',
+    src: '/images/pages/main/news/news_item.jpg',
     alt: 'Новый офис компании',
     colorAccent: '#8b5cf6',
     title: 'Открытие нового офиса',
@@ -57,7 +57,7 @@ const newsItems = [
   {
     id: 6,
     variant: NewsElementVariants.Rectangle,
-    src: '/images/pages/main/9l4N4CdkA8k 1.png',
+    src: '/images/pages/main/news/news_item.jpg',
     alt: 'Церемония награждения',
     colorAccent: '#ec4899',
     title: 'Мы получили награду',

@@ -18,7 +18,7 @@ export default function News() {
       <div className="flex flex-col items-center">
         {/* Изображение */}
         <div className="relative h-[206px] w-full lg:h-[342px]">
-          <Image src="/images/pages/news_image.jpg" fill alt="News image." className="object-cover" />
+          <Image src="/images/pages/news/news_image.jpg" fill alt="News image." className="object-cover" />
           <div className="absolute inset-0 flex justify-center">
             <div className="flex w-full max-w-screen-xl items-center px-5">
               <p className="text-[30px] font-bold text-white lg:text-[64px]">
@@ -36,7 +36,7 @@ export default function News() {
                 <PPOAccordionImageSummary>
                   <div className="aspect-[352/91] w-full">
                     <Image
-                      src="/images/pages/main/9l4N4CdkA8k 1.png"
+                      src="/images/pages/news/news_item.jpg"
                       alt="Техническая конференция 2023"
                       fill
                       className="object-cover"
