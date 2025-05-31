@@ -1,7 +1,6 @@
 'use client';
 
 import {
-  PageTransition,
   PPOAccordion,
   PPOListWrapper,
   PPOPageContentWrapper,
@@ -14,7 +13,7 @@ import React from 'react';
 
 export default function News() {
   return (
-    <PageTransition>
+    <div>
       <div className="flex flex-col items-center">
         {/* Изображение */}
         <div className="relative h-[206px] w-full lg:h-[342px]">
@@ -96,6 +95,6 @@ export default function News() {
 
         </PPOPageContentWrapper>
       </div>
-    </PageTransition>
+    </div>
   );
 }

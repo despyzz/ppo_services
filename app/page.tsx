@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import { TargetAudienceEnum } from '@/lib/models';
 import { About } from '@/app/_blocks/about/About';
-import { PageTransition } from '@/components';
 import Link from 'next/link';
 import { Partners, News } from './_blocks';
 
@@ -11,7 +10,7 @@ export default function Home() {
   const [currentTab, setCurrentTab] = useState<TargetAudienceEnum>(TargetAudienceEnum.NOT_SELECTED);
 
   return (
-    <PageTransition>
+    <div>
       <div className="flex flex-col items-center max-lg:h-[calc(100dvh-42px)] lg:h-auto">
         {/* Видео */}
         <div className="relative h-[206px] w-full flex-1 lg:h-[552px] lg:flex-initial">
@@ -59,6 +58,6 @@ export default function Home() {
         <News />
         <Partners />
       </div>
-    </PageTransition>
+    </div>
   );
 }

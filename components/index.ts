@@ -10,4 +10,3 @@ export { PPOPageContentWrapper } from './PageContentWrapper';
 export { PPOSectionWrapper } from './SectionWrapper';
 export { PPOListTitle } from './ListTitle';
 export { PPOListWrapper } from './ListWrapper';
-export { PageTransition } from './PageTransition';

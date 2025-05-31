@@ -3,7 +3,6 @@
 import React, { ReactNode, useState } from 'react';
 import Image from 'next/image';
 import { TargetAudienceEnum } from '@/lib/models';
-import { PageTransition } from '@/components';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -20,7 +19,7 @@ export default function DictionaryLayout({ children } : Readonly<{
   const [currentTab, setCurrentTab] = useState<TargetAudienceEnum>(StateByPathname[pathname]);
 
   return (
-    <PageTransition>
+    <div>
       <div className="flex flex-col items-center">
         {/* Изображение */}
         <div className="relative h-[206px] w-full lg:h-[342px]">
@@ -61,6 +60,6 @@ export default function DictionaryLayout({ children } : Readonly<{
         </div>
         {children}
       </div>
-    </PageTransition>
+    </div>
   );
 }
