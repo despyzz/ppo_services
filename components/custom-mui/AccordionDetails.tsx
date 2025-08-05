@@ -1,3 +1,5 @@
+'use client';
+
 import { AccordionDetails as MuiAccordionDetails, AccordionDetailsProps, styled } from '@mui/material';
 import React from 'react';
 import classNames from 'classnames';

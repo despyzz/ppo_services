@@ -1,3 +1,5 @@
+'use client';
+
 import {
   AccordionSummary as MuiAccordionSummary,
   accordionSummaryClasses,

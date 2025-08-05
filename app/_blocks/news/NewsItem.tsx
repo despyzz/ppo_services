@@ -2,43 +2,42 @@
 
 import Image from 'next/image';
 import React, { useState } from 'react';
+import { NewsItemDto } from '@/lib/models';
 import { NewsElementVariants, VariantsToAspectRatio } from './constants';
 
-interface NewsElementProps {
-  variant: NewsElementVariants;
-  src: string;
-  alt: string;
-  colorAccent: string;
-  title: string;
-  description: string;
-  date: string;
-}
+type NewsItemProps = NewsItemDto;
 
-export function NewsElement({
-  variant,
-  src,
-  alt,
-  colorAccent,
-  title,
+export default function NewsItem({
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  id_news,
+  name,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   description,
   date,
-}: NewsElementProps) {
+  path_to_photo,
+  Alt,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  Colour,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  Attribute,
+}: NewsItemProps) {
   const [isHovered, setIsHovered] = useState(false);
 
-  const accentWithOpacity = `${colorAccent}${isHovered ? 'b3' : '4d'}`; // b3 - 70%, 4d - 30$
+  const accentWithOpacity = `${Colour}${isHovered ? 'b3' : '4d'}`; // b3 - 70%, 4d - 30%
   const hoverColor = 'rgba(30, 30, 30, 0.7)';
 
   return (
     <div
-      className={`relative h-[clamp(144px,_35vw,_375px)] overflow-hidden ${VariantsToAspectRatio[variant]}`}
+      className={`relative h-[clamp(144px,_35vw,_375px)] overflow-hidden ${VariantsToAspectRatio[NewsElementVariants.Rectangle]}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Изображение с эффектом размытия при наведении */}
       <div className={`relative size-full duration-500 ${isHovered ? 'blur-[2px]' : ''}`}>
         <Image
-          src={src}
-          alt={alt}
+          // todo сделать адрес настраиваемым
+          src={`http://localhost:8080/ppo/images/${path_to_photo}`}
+          alt={Alt}
           fill
           className="object-cover"
         />
@@ -57,14 +56,8 @@ export function NewsElement({
           {date}
         </div>
 
-        <div className={`min-h-[20px] overflow-y-auto transition-opacity duration-500 ${isHovered ? 'opacity-90' : 'opacity-0'}`}>
-          <p className="text-[clamp(12px,_2.5vw,_24px)]">
-            {description}
-          </p>
-        </div>
-
         <p className="self-end text-[clamp(14px,_3vw,_32px)] font-bold drop-shadow-md">
-          {title}
+          {name}
         </p>
       </div>
     </div>
